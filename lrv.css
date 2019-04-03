@@ -5,14 +5,15 @@
 
 #menu {
 text-transform: uppercase;
-font-size: 30px;
 margin: 0 auto;
+padding-bottom: 0px;
 }
 
 .card {
   width: 300px;
   height: 460px;
-  margin: 0 auto;
+  margin: 0 auto 100px auto;
+
 }
 
 .card img{
@@ -37,3 +38,30 @@ margin: 0 auto;
 .livesearch {
   width: 100%;
 }
+
+#subBrand {
+  font-size: 16px;
+}
+
+#side {
+  height: 430px !important;
+}
+
+#navbar {
+  background-color: #4F4B7D !important;
+}
+
+.social a {
+  font-size: 3em;
+  }
+
+#contacts {
+font-size: 36px;
+color: #F53C85;
+padding: 5px 15px;
+}
+
+  footer {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }

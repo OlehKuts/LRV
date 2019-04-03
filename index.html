@@ -26,15 +26,19 @@
   <script src="chosen.jquery.min.js"></script>
   <script src="chosen.jquery.js"></script>  
 
-  <title>ДПП</title>
+  <title>PA</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-dark navbar-expand-md bg-primary sticky-top">
-    <div class="container-fluid">
-      <a href="#" class="navbar-brand"><img id="logo" src="images/logo4.png" alt="logo"></a>
-      <div id="menu" class="row text-center navbar-brand">Дізнавайся, пригадуй, перевіряй</div>
+  
+
+<nav class="navbar navbar-dark navbar-expand-md bg-primary sticky-top" id="navbar">
+    <div class="container-fluid " >
+      <a href="#" class="navbar-brand"><img id="logo" src="logo2.png" alt="logo"></a>
+      <div id="menu" class="row text-center navbar-brand">
+        <h3>PHARM ASSISTANT</h3>
+        <p id="subBrand">Дізнайся, пригадай, перевір</p></div>
     </div>
   </nav>
 
@@ -42,7 +46,7 @@
   <div class="container-fluid padding alert" id="drugs">
     <div class="input-group mb-3">
       <select class="custom-select" id="inputGroupSelect02">
-        <option>Оберіть перпарат</option>
+        <option>Оберіть препарат</option>
       </select>
       <div class="input-group-append">
         <label class="input-group-text" for="inputGroupSelect02">Список</label>
@@ -63,25 +67,69 @@
 
   <div class="container-fluid padding alert">
 
-    <div class="card">
-      <img src="images/card.jpg" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Назва препарату</h5>
-        <p class="card-text text-muted">Форма випуску</p>
+    <div class="row">
+<div class="col-xl-4 order-xl-first" >
+
+  <div class="card border-info" style="width: 24rem;" id="side">
+    <div class="card-header text-center">
+      <h4>Коротка інструкція</h4>
+    </div>
+    <ol class="list-group list-group-flush text-info" >
+      <li class="list-group-item">Оберіть препарат зі списку</li>
+      <li class="list-group-item">Введіть вагу пацієнта та натисніть клавішу "ENTER"</li>
+      <li class="list-group-item">На жовтому фоні буде виведено разову дозу для пацієнта</li>
+      <li class="list-group-item">Ознайомтесь нижче також з іншими основними параметрами інструкції</li>
+      <li class="list-group-item">Для отримання додаткової інформації про препарат перейдіть по посиланню на його повну інструкцію</li>
+    </ol>
+  </div>
+
+</div>
+<div class="col-xl-4 order-first ">
+      <div class="card ">
+        <img src="card.jpg" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Назва препарату</h5>
+          <p class="card-text text-muted" id="form-title">Форма випуску</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" id="li1"><span id="dose">Разова доза</span></li>
+          <li class="list-group-item" id="li2">Частота прийому</li>
+          <li class="list-group-item" id="li3">Спосіб застосування</li>
+          <li class="list-group-item" id="li4">Діапазон пацієнтів</li>
+          <a href="#" target="blank" class="btn btn-primary " id="linkFull">Повна інструкція препарату</a>
+        </ul>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item" id="li1"><span id="dose">Разова доза</span></li>
-        <li class="list-group-item" id="li2">Частота прийому</li>
-        <li class="list-group-item" id="li3">Спосіб застосування</li>
-        <li class="list-group-item" id="li4">Діапазон пацієнтів</li>
-        <a href="#" target="blank" class="btn btn-primary " id="linkFull">Повна інструкція препарату</a>
-      </ul>
+      </div>
+
+<div class="col-xl-4" >
+  <div class="card text-white bg-danger mb-3" style="max-width: 24rem;" id="side">
+    <div class="card-header text-center"><h4>Застереження</h4></div>
+    <div class="card-body">
+      
+      <p class="card-text" style="font-size: 20px">Дана сторінка може використовуватись лікарями чи 
+        їх пацієнтами лише як допоміжне застосування для 
+        уточненння чи перевірки правильності призначення 
+        разової  дози чи інших основних пунктів інструкції
+        препарату</p>
+    </div>
+
+</div>
+
     </div>
 
   </div>
 
+  <footer class="container-fluid ">
 
+      <div class="row padding text-center social">
+        <div class="col-12">
+          <a href="https://www.facebook.com/profile.php?id=100017156830301"><i class="fab fa-facebook"></i></a>
+          <span id="contacts">Контакти розробника</span>
+          <a href="https://github.com/OlehKuts"><i class="fab fa-github"></i></a>
 
+        </div>
+
+    </footer>
 
 
  

@@ -22,6 +22,7 @@ const intramuscularly = "внутрішньом'язово"
 const anyAge = "для будь-якого віку";
 const agePlus12 = "12 років та старші";
 const ageInfant = "тільки для дітей";
+const ageOneMonth = "для дітей від одного місяця";
 const ageTwoMonth = "для дітей від двох місяців";
 const ageThreeMonth = "для дітей від трьох місяців";
 const ageTwoYears = "для дітей від двох років"
@@ -154,7 +155,7 @@ function dcNurofenSyrup(kg) {
   let result = 0;
   if (kg < 40 && kg > 0) {
     result = kg / 10 * 4;
-    return result + "мл";
+    return result.toFixed(1) + "мл";
   }
   else if (kg < 200 && kg > 0) {
     alert(alertTab);
@@ -241,7 +242,7 @@ function dcLoratadin(kg) {
 function dcFenistil(kg) {
   let result = 0;
 
-  if (kg < 200 && kg > 0) {
+  if (kg < 61 && kg > 0) {
     result = kg * 2 / 3;
     return result.toFixed(0) + " крап.";
 
@@ -320,7 +321,7 @@ Pusher(13, "sumamed200", "Сумамед форте(200 мг/5 мл)", "Поро
 linksPusher("https://tabletki.ua/%D0%9B%D0%BE%D1%80%D0%B0%D1%82%D0%B0%D0%B4%D0%B8%D0%BD/2075/");
 Pusher(14, "loratadin", "Лоратадин", "Сироп, 1 мг/мл ", dcLoratadin, "images/14.jpg", every24, internally, ageTwoYears);
 linksPusher("https://tabletki.ua/%D0%A4%D0%B5%D0%BD%D0%B8%D1%81%D1%82%D0%B8%D0%BB/");
-Pusher(15, "fenistil", "Феністил", "Краплі оральні, 1 мг/мл ", dcFenistil, "images/15.jpg", every8, internally, ageInfant);
+Pusher(15, "fenistil", "Феністил", "Краплі оральні, 1 мг/мл ", dcFenistil, "images/15.jpg", every8, internally, ageOneMonth);
 linksPusher("https://tabletki.ua/%D0%AD%D0%BD%D1%82%D0%B5%D1%80%D0%BE%D0%B6%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0-%D1%84%D0%BE%D1%80%D1%82%D0%B5/");
 Pusher(16, "enterogermina", "Ентерожерміна форте", "Суспензія оральна", dcEnterogermina, "images/16.jpg", every24, internally, anyAge);
 
@@ -344,7 +345,7 @@ $('select').change(function () {
 
     $(".card-img-top").attr("src", currObj.image);
     $(".card-title").text(currObj.title);
-    $(".card-text").text(currObj.form);
+    $("#form-title").text(currObj.form);
     $("#li2").text(currObj.frequency);
     $("#li3").text(currObj.way);
 
@@ -361,5 +362,5 @@ $("input[type='text']").on("keypress", function (event) {
   }
 });
 
-$(".livesearch").chosen();
+
 
